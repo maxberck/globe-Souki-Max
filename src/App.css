@@ -1,0 +1,35 @@
+/* App.css */
+
+/* Style de base pour le bouton */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: bold;
+  }
+  
+  /* Style pour le mode clair */
+  button {
+    background-color: #0e0e6d; /* Vert clair */
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Vert plus foncé au survol */
+    transform: scale(1.1); /* Légère animation de zoom au survol */
+  }
+  
+  /* Style pour le mode sombre */
+  .dark button {
+    background-color: #333; /* Fond sombre */
+    color: white;
+  }
+  
+  .dark button:hover {
+    background-color: #555; /* Fond plus clair au survol */
+    transform: scale(1.1); /* Animation de zoom au survol */
+  }
+  
