@@ -1,21 +1,16 @@
-import { useState } from 'react';
-import './App.css';
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 import Info from './components/Info';
-import axios from "axios";
-
 
 function App() {
-
-  return (
-   <>
-       <Routes>
-         <Route path="/" element={<Home />} />
-         <Route path="/info" element={<Info />} />
-       </Routes>
-   </>
-  );
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/country/:name" element={<Info />} />  {/* Modifié ici */}
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
