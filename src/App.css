@@ -1,4 +1,8 @@
 /* App.css */
+body{
+  background-image: url(../src/images/21fbbe77-184a-4cce-8c3c-fd483dc76e0a.jpg);
+  background-size: cover;
+}
 
 /* Style de base pour le bouton */
 button {
