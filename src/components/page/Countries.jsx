@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+import "../page/Countries.css"
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 

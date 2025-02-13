@@ -1,0 +1,84 @@
+
+
+  
+
+
+  .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+
+  .card .info {
+    padding: 15px;
+  }
+  
+  .card h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+
+  input,
+  select,
+  button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  input {
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+  
+  .dark input {
+    border: 1px solid #4a5568;
+    background: #2d3748;
+    color: white;
+  }
+  
+  select {
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .dark select {
+    border: 1px solid #4a5568;
+    background: #2d3748;
+    color: white;
+  }
+  
+  button {
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  button:hover {
+    background: #1d4ed8;
+  }
+  
+  .dark button {
+    background: #3b82f6;
+  }
+  
+  .dark button:hover {
+    background: #2563eb;
+  }
+  
+
+  .grid {
+    display: grid;
+    gap: 50px;
+  }
+  
+ 
