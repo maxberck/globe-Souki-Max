@@ -1,14 +1,13 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-export default function Countries() {
+export default function Countries({darkMode}) {
   const [countries, setCountries] = useState([]); // Liste des pays
   const [searchText, setSearchText] = useState(""); // Texte de recherche
   const [loading, setLoading] = useState(true); // État de chargement
 
   // Liste des régions disponibles pour le filtre
   const regions = ["Europe", "Asia", "Africa", "Oceania", "Americas", "Antarctic"];
-
   // useEffect s'exécute quand le composant est chargé
   useEffect(() => {
     // Titre de la page
@@ -75,8 +74,8 @@ export default function Countries() {
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-          className="py-3 px-4 w-full shadow rounded dark:bg-gray-800 dark:text-gray-400"
-        />
+          className={`py-3 px-4 w-full shadow rounded ${darkMode ?'bg-gray-800 text-gray-400':'border-[#adb5bd] bg-white'}
+          `}/>
         {/* Bouton de recherche */}
         <button
           onClick={handleSearch}
