@@ -10,6 +10,7 @@ function Info({ darkMode }) {
     useEffect(() => {
         const getSingleCountry = async () => {
             try {
+                // import de l'API
                 const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
                 const data = await res.json();
 
@@ -30,7 +31,7 @@ function Info({ darkMode }) {
     useEffect(() => {
         document.title = `Countries | ${name}`;
     }, [name]);
-
+    // Si ce n'est pas un pays qui existe alors ça affiche ça
     if (!country) {
         return (
             <div className={`p-8 text-center ${darkMode ? "bg-[#1F2938] text-white" : "bg-white text-white-900"}`}>
@@ -55,7 +56,7 @@ function Info({ darkMode }) {
                     <div>
                         <h1 className="mb-8 font-bold text-4xl lg:text-6xl">{country.name?.common || "Unknown Country"}</h1>
 
-                        <ul className="my-4 flex flex-col items-start justify-start gap-2 text-white-900 dark:text-white">
+                        <ul className="my-4 flex flex-col items-start justify-start gap-2 text-white-900">
                             <li><strong>Native Name:</strong> {country.name?.nativeName
                                 ? Object.values(country.name.nativeName).map(n => n.common).join(", ")
                                 : "N/A"}
@@ -93,7 +94,7 @@ function Info({ darkMode }) {
                         )}
 
                         {/* Bouton de retour */}
-                        <Link to="/" className={`inline-block mt-8 py-2 px-6 rounded shadow transition-all duration-200 ${darkMode ? "bg-gray-700 text-white hover:bg-gray-600" : "bg-gray-300 text-gray-900 hover:bg-gray-400"}`}>
+                        <Link to="/" className={`inline-block mt-8 py-2 px-6 rounded shadow ${darkMode ? "bg-gray-700 text-white hover:bg-gray-600" : "bg-gray-300 text-gray-900 hover:bg-gray-400"}`}>
                             Back
                         </Link>
                     </div>
